@@ -1,0 +1,69 @@
+.advent-calender {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 185px);
+  width: 400px;
+  padding: 0 10px 10px;
+  box-sizing: border-box;
+}
+
+.flex-grid {
+  display: flex;
+  width: 75%;
+  align-items: center;
+}
+
+.col {
+  flex: 1;
+  width: 25%;
+  margin: 1px;
+}
+
+.kasten {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1px;
+}
+
+.dietuer {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.img img {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dietueroffen {
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+.col:nth-of-type(even) .kasten:nth-of-type(even) .dietuer {
+  background-color: #47d147;
+}
+.col:nth-of-type(even) .kasten:nth-of-type(odd) .dietuer {
+  background-color: #ff1a1a;
+}
+
+.col:nth-of-type(odd) .kasten:nth-of-type(odd) .dietuer {
+  background-color: #47d147;
+}
+.col:nth-of-type(odd) .kasten:nth-of-type(even) .dietuer {
+  background-color: #ff1a1a;
+}
