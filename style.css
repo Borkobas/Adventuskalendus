@@ -51,7 +51,7 @@
 }
 
 .dietueroffen {
-  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+  transform: perspective(1100px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-125deg);
 }
 
 .col:nth-of-type(even) .kasten:nth-of-type(even) .dietuer {
