@@ -1,69 +1,41 @@
-.advent-calender {
-  position: absolute;
-  top: calc(50% - 150px);
-  left: calc(50% - 185px);
-  width: 400px;
-  padding: 0 10px 10px;
-  box-sizing: border-box;
+.kalendus {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
-.flex-grid {
-  display: flex;
-  width: 75%;
-  align-items: center;
+
+.kalendus-umschlag {
+  width: 280px;
 }
 
-.col {
-  flex: 1;
-  width: 25%;
-  margin: 1px;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-.kasten {
-  width: 100%;
-  height: 45px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1px;
+.feld {
+  background: lightblue;
+  width: 0px;
+  height: 0px;
+  margin: 20px auto;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.dietuer {
-  width: 100%;
-  height: 45px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: left;
-  transition: all 0.5s ease-in-out;
-  z-index: 2;
+.offen-feld {
+    width: 150px;
+    height: 150px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
-.img img {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.dietueroffen {
-  transform: perspective(1100px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-125deg);
-}
-
-.col:nth-of-type(even) .kasten:nth-of-type(even) .dietuer {
-  background-color: #47d147;
-}
-.col:nth-of-type(even) .kasten:nth-of-type(odd) .dietuer {
-  background-color: #ff1a1a;
-}
-
-.col:nth-of-type(odd) .kasten:nth-of-type(odd) .dietuer {
-  background-color: #47d147;
-}
-.col:nth-of-type(odd) .kasten:nth-of-type(even) .dietuer {
-  background-color: #ff1a1a;
+button {
+  display: block;
+  margin: auto;
 }
